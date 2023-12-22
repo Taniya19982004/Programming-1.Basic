@@ -5,10 +5,8 @@ int main(){
     int n;
     cout<<"Enter a number"<<endl;
     cin>>n;
-    int ans=n&1;
-    cout<<ans;
 
-    /*if(n&1)
+    if(n&1)
     {
         cout<<" odd number";
     }
@@ -16,6 +14,6 @@ int main(){
     {
         cout<<"even number";
     }
-*/
+
 return 0;
 }
