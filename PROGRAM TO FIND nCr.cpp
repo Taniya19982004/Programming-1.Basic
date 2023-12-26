@@ -1,46 +1,27 @@
 #include<bits/stdc++.h>
-#include<iostream>
 using namespace std;
-
-int main(){
-    int n;
-    cout<<"Enter the value of n"<<endl;
-    cin>>n;
-    int na=1;
+int factorial(int n){
+int fact=1;
     for(int i=n;i>1;i--)
     {
-        na=na*i;
-
+        fact=fact*i;
     }
-    
+    return fact;
+}
 
-    int r;
-    int rad=1;
-    cout<<"Enter the value of r"<<endl;
-    cin>>r;
-    for(int i=r;i>1;i--)
-    {
-         rad=rad*i;
 
-    }
-    
+int nCr(int n,int r)
+{
+   int num=factorial(n);
+   int den=factorial(r)*factorial(n-r);
+   return num/den;
 
-    int c=n-r;
-    int cat=1;
-    for(int i=c;i>1;i--)
-    {
-       int cat = cat*i;
-      
-    }
-    int den = cat*rad;
-   
+}
+int main(){
+    int n,r;
+    cout<<"Enter the value of n and r "<<endl;
+    cin>>n>>r;
+    int ans=nCr(n,r);
+    cout<<"the answer of nCr"<<ans;
 
-    int fact=na/den;
-    cout<<"the factorial is "<<fact;
-
-    
-
-   
-
-return 0;
 }
